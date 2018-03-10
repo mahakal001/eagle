@@ -1,0 +1,27 @@
+/* Function prototypes */
+irc_t* init_irc_struct (void);
+void   irc_reg_join (int sfd,irc_t* pIrc);
+void   register_wid_nw (int sfd,irc_t* pIrc);
+void   join_channel (int sfd,irc_t* irc);
+void   join_channel (int sfd,irc_t* irc);
+struct addrinfo* build_hint_addr (void);
+struct addrinfo* x_getaddrinfo (char* arg1,char* arg2,struct addrinfo* hint);
+int   x_connect (struct addrinfo* result);
+void  frame_and_send (int sfd,char*msg,irc_t* pIrc);
+void  xsend (int sfd,char* msg,unsigned int msgLen,irc_t* pIrc);
+void  xexit (char* msg);
+void  sock_recv (int sfd,irc_t* pIrc);
+void  search_token(int sfd,char* buff,irc_t* pIrc);
+void  google_search(int sfd,char* arg,irc_t* pIrc);
+void  pong(char *p,int sfd);
+void  ret_time(int sfd,irc_t* pIrc);
+void  resolve_host(int sfd,char* domain_name,irc_t* pIrc);
+int   callback(void *data, int argc, char **argv, char **azColName);
+void  playgame(int sfd,irc_t* pIrc);
+int   get_random(int maxLimit);
+void  get_question(int randomNo,void* question,sqlite3 *db);
+void  get_answer(int randomNo,void* answer,sqlite3 *db);
+int   handle_answer(int sfd,char* answer,irc_t*  pIrc);
+char* match_string(char* buff,char* str_to_match);
+void  send_help_msg(int sfd,irc_t* pIrc);
+void handle_shell(int ,char*,irc_t*);

@@ -1,0 +1,1 @@
+[,help  <for help menu>],[,wiki  <word to search>],[,find  <will search web>],[,time <will return time>],[,resolve < will resolve given domain > ],[,playgame < play the game wid bot" >]
